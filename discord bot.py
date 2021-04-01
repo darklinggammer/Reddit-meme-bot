@@ -5,11 +5,11 @@ import praw
 import random
 client = commands.Bot(command_prefix = '!')
 
-reddit = praw.Reddit(client_id = (os.environ('Client_id')),
-                    client_secret = (os.environ('secret')),
-                    username = (os.environ('username')),
-                    password = (os.environ('password')),
-                    user_agent = (os.environ('Agent')),
+reddit = praw.Reddit(client_id = ('Client_id'),
+                    client_secret = ('secret'),
+                    username = ('username'),
+                    password = ('password'),
+                    user_agent = ('Agent'),
                     )
 
 
@@ -40,4 +40,4 @@ async def meme(ctx):
   await ctx.send(embed= em)
 
 
-client.run(os.environ('Token'))
+client.run('Token')
